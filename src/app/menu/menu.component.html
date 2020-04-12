@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">{{title}}</a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item active" ngbDropdown>
+            <a class="nav-link"  aria-disabled="false" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown1" role="button">Customer</a>
+            <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+              <a ngbDropdownItem  routerLink="/customeradd">Add Customer</a>
+              <a ngbDropdownItem routerLink="/customerlist">List of Customer</a>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" aria-disabled="false">Contacts</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" aria-disabled="false">Pricing</a>
+          </li>
+      </ul>
+    </div>
+</nav>
